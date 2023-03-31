@@ -46,7 +46,7 @@ airac <- function(date) {
 #' @examples
 #' airac_year_epoch(2018)
 airac_year_epoch <- function(year) {
-  y_beg <- lubridate::ymd(stringr::str_c(year, "-01-01"), tz = "UTC")
+  y_beg <- lubridate::ymd(paste0(year, "-01-01"), tz = "UTC")
   # days since last effective date
   extra_days <- lubridate::interval(airac_epoch(), y_beg) %/% lubridate::days(1) %% 28
   y_beg - lubridate::days(extra_days) + lubridate::days(28)
@@ -66,10 +66,10 @@ airac_year_epoch <- function(year) {
 #'
 airac_interval <- function(airac) {
   year <- lubridate::ymd(
-    stringr::str_c(stringr::str_sub(airac, 1, 2), "-01-01"),
+    paste0(substr(airac, 1, 2), "-01-01"),
     tz = "UTC")
   year <- lubridate::year(year)
-  cycle <- as.integer(stringr::str_sub(airac, 3, 4))
+  cycle <- as.integer(substr(airac, 3, 4))
   y_epoch <- airac_year_epoch(year)
   a_beg <- y_epoch + lubridate::ddays( (cycle - 1) * 28)
   a_end <- a_beg + lubridate::ddays(28)
