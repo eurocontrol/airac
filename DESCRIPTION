@@ -1,24 +1,25 @@
-Package: airac
 Type: Package
-Title: Helper functions to get AIRAC number and intervals as used in the Aeronautical Information Services.
+Package: airac
+Title: Helper functions to get AIRAC number and intervals as used in the
+    Aeronautical Information Services.
 Version: 0.1.9000
-Authors@R: 
-    c(person(given = "Enrico",
-             family = "Spinielli",
-             role = c("aut", "cre"),
-             email = "enrico.spinielli@eurocontrol.int",
-             comment = c(ORCID = "0000-0001-8584-9131")),
-      person(given = "EUROCONTROL",
-             role = c("cph", "fnd")))
+Authors@R: c(
+    person("Enrico", "Spinielli", , "enrico.spinielli@eurocontrol.int", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-8584-9131")),
+    person("EUROCONTROL", role = c("cph", "fnd"))
+  )
 Maintainer: Enrico Spinielli <enrico.spinielli@eurocontrol.int>
-Description: Derive AIRAC numbers and relevant intervals both as used internatiuonally
-    and by the data services of the European Network Manager, i.e. the CFMU AIRAC.
+Description: Derive AIRAC numbers and relevant intervals both as used
+    internatiuonally and by the data services of the European Network
+    Manager, i.e. the CFMU AIRAC.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.2.3
+URL: https://github.com/eurocontrol/airac
+BugReports: https://github.com/eurocontrol/airac/issues
 Imports: 
     lubridate
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
