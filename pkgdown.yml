@@ -1,0 +1,9 @@
+pandoc: 2.19.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles: {}
+last_built: 2023-03-31T16:00Z
+urls:
+  reference: https://eurocontrol.github.io/airac/reference
+  article: https://eurocontrol.github.io/airac/articles
+
