@@ -10,7 +10,7 @@ Authors@R: c(
   )
 Maintainer: Enrico Spinielli <enrico.spinielli@eurocontrol.int>
 Description: Derive AIRAC ID and relevant intervals both as used
-    internatiuonally and by the data services of the European Network
+    internationally and by the data services of the European Network
     Manager, i.e. the CFMU AIRAC.
 License: MIT + file LICENSE
 URL: https://github.com/eurocontrol/airac
