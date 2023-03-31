@@ -1,7 +1,7 @@
 Type: Package
 Package: airac
-Title: Helper functions to get AIRAC number and intervals as used in the
-    Aeronautical Information Services.
+Title: Helper functions to get ICAO AIRAC ID and intervals as used in
+    Aeronautical Information Services and Publications.
 Version: 0.1.9000
 Authors@R: c(
     person("Enrico", "Spinielli", , "enrico.spinielli@eurocontrol.int", role = c("aut", "cre"),
@@ -9,7 +9,7 @@ Authors@R: c(
     person("EUROCONTROL", role = c("cph", "fnd"))
   )
 Maintainer: Enrico Spinielli <enrico.spinielli@eurocontrol.int>
-Description: Derive AIRAC numbers and relevant intervals both as used
+Description: Derive AIRAC ID and relevant intervals both as used
     internatiuonally and by the data services of the European Network
     Manager, i.e. the CFMU AIRAC.
 License: MIT + file LICENSE
