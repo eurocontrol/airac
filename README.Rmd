@@ -13,42 +13,44 @@ knitr::opts_chunk$set(
 )
 ```
 
-# airac
+# The `airac` package
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of airac is to ...
+The `airac` package helps with determining the ICAO's AIRAC ID or the relevant
+date intervals as used internationally and by the data services of the
+European Network Manager.
+
+AIRAC stands for Aeronautical Information Regulation and Control and it indicates
+the period used to publish and disseminate changes to [aeronautical data][aip].
+
+[aip]: <https://en.wikipedia.org/wiki/Aeronautical_Information_Publication> "Aeronautical Information Publication"
 
 ## Installation
 
 You can install the development version of airac like so:
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```{r eval=FALSE}
+library(remotes)
+install_github("euctrl-pru/pruatlas")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+You may be interested to know which period corresponfs to AIRAC '2307'
 
 ```{r example}
 library(airac)
-## basic example code
+
+airac_interval("2307")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+or which AIRAC number is needed to download data on 1st Feb 2023 from EUROCONTROL's
+Network Manager DDR2 repository:
 
-```{r cars}
-summary(cars)
+```{r example-nm}
+library(airac)
+
+cfmu_airac("2023-02-01")
 ```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
