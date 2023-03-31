@@ -1,7 +1,6 @@
-url: ~
+url: https://eurocontrol.github.io/airac/
 template:
   bootstrap: 5
-
 
 authors:
   Enrico Spinielli:

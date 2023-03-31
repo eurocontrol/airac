@@ -13,7 +13,8 @@ Description: Derive AIRAC ID and relevant intervals both as used
     internationally and by the data services of the European Network
     Manager, i.e. the CFMU AIRAC.
 License: MIT + file LICENSE
-URL: https://github.com/eurocontrol/airac
+URL: https://github.com/eurocontrol/airac,
+    https://eurocontrol.github.io/airac/
 BugReports: https://github.com/eurocontrol/airac/issues
 Imports: 
     lubridate (>= 1.1.0)
