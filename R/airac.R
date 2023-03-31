@@ -65,9 +65,10 @@ airac_year_epoch <- function(year) {
 #' airac_interval("1603")
 #'
 airac_interval <- function(airac) {
-  year <- lubridate::ymd(stringr::str_c(stringr::str_sub(airac, 1, 2), "-01-01"),
-                         tz = "UTC") %>%
-    lubridate::year()
+  year <- lubridate::ymd(
+    stringr::str_c(stringr::str_sub(airac, 1, 2), "-01-01"),
+    tz = "UTC")
+  year <- lubridate::year(year)
   cycle <- as.integer(stringr::str_sub(airac, 3, 4))
   y_epoch <- airac_year_epoch(year)
   a_beg <- y_epoch + lubridate::ddays( (cycle - 1) * 28)
