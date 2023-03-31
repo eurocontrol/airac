@@ -1,11 +1,18 @@
 Package: airac
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Title: Helper functions to get AIRAC number and intervals as used in the Aeronautical Information Services.
+Version: 0.1.9000
+Authors@R: 
+    c(person(given = "Enrico",
+             family = "Spinielli",
+             role = c("aut", "cre"),
+             email = "enrico.spinielli@eurocontrol.int",
+             comment = c(ORCID = "0000-0001-8584-9131")),
+      person(given = "EUROCONTROL",
+             role = c("cph", "fnd")))
+Maintainer: Enrico Spinielli <enrico.spinielli@eurocontrol.int>
+Description: Derive AIRAC numbers and relevant intervals both as used internatiuonally
+    and by the data services of the European Network Manager, i.e. the CFMU AIRAC.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
