@@ -11,6 +11,7 @@ the AIRAC epoch according to ICAO scheme
 }
 \description{
 AIRAC epoch is defined in  section 2.6.2 b) of
+ \href{https://www.icao.int/NACC/Documents/Meetings/2014/ECARAIM/REF09-Doc8126.pdf}{ICAO Doc 8126}.
 }
 \examples{
 airac_epoch()

@@ -1,7 +1,8 @@
 #' AIRAC epoch as from ICAO Doc 8126
 #'
 #' AIRAC epoch is defined in  section 2.6.2 b) of
-#  \href{https://www.icao.int/NACC/Documents/Meetings/2014/ECARAIM/REF09-Doc8126.pdf}{ICAO Doc 8126}.
+#'  \href{https://www.icao.int/NACC/Documents/Meetings/2014/ECARAIM/REF09-Doc8126.pdf}{ICAO Doc 8126}.
+#'
 #' @return the AIRAC epoch according to ICAO scheme
 #' @family airac
 #' @export
@@ -53,11 +54,11 @@ airac_year_epoch <- function(year) {
 }
 
 
-#' The interval od dates for an (ICAO) AIRAC
+#' The interval of dates for an (ICAO) AIRAC
 #'
 #' @param airac the ICAO AIRAC, i.e. "1603" for the 3rd AIRAC of 2016
 #'
-#' @return an interval of (28) days coverad by the AIRAC `airac`
+#' @return an interval of (28) days covered by the AIRAC `airac`
 #' @family airac
 #' @export
 #'

@@ -2,7 +2,7 @@
 % Please edit documentation in R/airac.R
 \name{airac_interval}
 \alias{airac_interval}
-\title{The interval od dates for an (ICAO) AIRAC}
+\title{The interval of dates for an (ICAO) AIRAC}
 \usage{
 airac_interval(airac)
 }
@@ -10,10 +10,10 @@ airac_interval(airac)
 \item{airac}{the ICAO AIRAC, i.e. "1603" for the 3rd AIRAC of 2016}
 }
 \value{
-an interval of (28) days coverad by the AIRAC `airac`
+an interval of (28) days covered by the AIRAC `airac`
 }
 \description{
-The interval od dates for an (ICAO) AIRAC
+The interval of dates for an (ICAO) AIRAC
 }
 \examples{
 airac_interval("1603")

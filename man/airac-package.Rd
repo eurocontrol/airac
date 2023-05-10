@@ -4,8 +4,26 @@
 \name{airac-package}
 \alias{airac-package}
 \alias{_PACKAGE}
-\title{airac: What the Package Does (Title Case)}
+\title{airac: Helper functions to get ICAO AIRAC ID and intervals as used in Aeronautical Information Services and Publications.}
 \description{
-More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
+Derive AIRAC ID and relevant intervals both as used internationally and by the data services of the European Network Manager, i.e. the CFMU AIRAC.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/eurocontrol/airac}
+  \item \url{https://eurocontrol.github.io/airac/}
+  \item Report bugs at \url{https://github.com/eurocontrol/airac/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Enrico Spinielli \email{enrico.spinielli@eurocontrol.int} (\href{https://orcid.org/0000-0001-8584-9131}{ORCID})
+
+Other contributors:
+\itemize{
+  \item EUROCONTROL [copyright holder, funder]
+}
+
 }
 \keyword{internal}
