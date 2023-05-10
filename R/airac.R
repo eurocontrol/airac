@@ -16,9 +16,9 @@ airac_epoch <- function() {
 
 #' Return the ICAO AIRAC id for a date
 #'
-#' @param date a date (or a ymd representation of it)
+#' @param date a date (or a representation of it understood by [lubridate::ymd()])
 #'
-#' @return the ICAO AIRCA id
+#' @return the ICAO AIRAC id
 #' @family airac
 #' @export
 #'
@@ -46,6 +46,7 @@ airac <- function(date) {
 #'
 #' @examples
 #' airac_year_epoch(2018)
+#'
 airac_year_epoch <- function(year) {
   y_beg <- lubridate::ymd(paste0(year, "-01-01"), tz = "UTC")
   # days since last effective date

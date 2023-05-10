@@ -7,10 +7,10 @@
 airac(date)
 }
 \arguments{
-\item{date}{a date (or a ymd representation of it)}
+\item{date}{a date (or a representation of it understood by \code{\link[lubridate:ymd]{lubridate::ymd()}})}
 }
 \value{
-the ICAO AIRCA id
+the ICAO AIRAC id
 }
 \description{
 Return the ICAO AIRAC id for a date
