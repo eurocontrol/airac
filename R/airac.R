@@ -27,9 +27,10 @@ airac_epoch <- function() {
 #'
 airac <- function(date) {
   d <- lubridate::ymd(date, tz = "UTC")
-  y_beg <- lubridate::floor_date(d, "year")
   extra_days <- ( lubridate::interval(cfmu_airac_epoch(), d) %/% lubridate::days(1)) %%     28
-  num_cycles <- ( ( (lubridate::interval(y_beg, d) %/% lubridate::days(1)) - extra_days) %/% 28) + 1
+  d <- d - lubridate::days(extra_days)
+  y_beg <- lubridate::floor_date(d, "year")
+  num_cycles <- ((lubridate::interval(y_beg, d) %/% lubridate::days(1)) %/% 28) + 1
   cy <- sprintf("%02d", num_cycles)
   yy <- format(d, "%y")
   paste0(yy, cy)
@@ -74,6 +75,8 @@ airac_interval <- function(airac) {
   cycle <- as.integer(substr(airac, 3, 4))
   y_epoch <- airac_year_epoch(year)
   a_beg <- y_epoch + lubridate::ddays( (cycle - 1) * 28)
+  # TODO: check for correct `airac`
+  # stopifnot(airac(a_beg) != airac)
   a_end <- a_beg + lubridate::ddays(28)
   lubridate::interval(a_beg, a_end)
 }

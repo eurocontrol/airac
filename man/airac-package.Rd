@@ -4,14 +4,13 @@
 \name{airac-package}
 \alias{airac-package}
 \alias{_PACKAGE}
-\title{airac: Helper functions to get ICAO AIRAC ID and intervals as used in Aeronautical Information Services and Publications.}
+\title{airac: Helper functions to get ICAO AIRAC ID and intervals as used in Aeronautical Information Services and Publications}
 \description{
 Derive AIRAC ID and relevant intervals both as used internationally and by the data services of the European Network Manager, i.e. the CFMU AIRAC.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/eurocontrol/airac}
   \item \url{https://eurocontrol.github.io/airac/}
   \item Report bugs at \url{https://github.com/eurocontrol/airac/issues}
 }

@@ -1,7 +1,7 @@
 Type: Package
 Package: airac
 Title: Helper functions to get ICAO AIRAC ID and intervals as used in
-    Aeronautical Information Services and Publications.
+    Aeronautical Information Services and Publications
 Version: 0.1.9000
 Authors@R: c(
     person("Enrico", "Spinielli", , "enrico.spinielli@eurocontrol.int", role = c("aut", "cre"),
