@@ -70,7 +70,5 @@ with_options(list(pkgdown.internet = FALSE),
              build_site())
 ```
 
-Note that the pkgdown website is generated in `docs/` which is ignored by git.
-So if you want to publish a new version of the package website, you need
-to force add `docs/`.
+Note that the pkgdown website is generated automatically via GitHub Actions and published on a separate branch.
 it will then be served by GitHub Pages as per repo configuration.
