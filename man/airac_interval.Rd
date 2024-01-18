@@ -16,7 +16,7 @@ an interval of (28) days covered by the AIRAC \code{airac}
 The interval of dates for an (ICAO) AIRAC
 }
 \examples{
-airac_interval("1603")
+airac_interval("2403")
 
 }
 \seealso{

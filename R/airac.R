@@ -18,12 +18,12 @@ airac_epoch <- function() {
 #'
 #' @param date a date (or a representation of it understood by [lubridate::ymd()])
 #'
-#' @return the ICAO AIRAC id
+#' @return the ICAO AIRAC id, i.e. '2301'
 #' @family airac
 #' @export
 #'
 #' @examples
-#' airac('2019-01-30')
+#' airac('2027-01-30')
 #'
 airac <- function(date) {
   d <- lubridate::ymd(date, tz = "UTC")
@@ -65,18 +65,23 @@ airac_year_epoch <- function(year) {
 #' @export
 #'
 #' @examples
-#' airac_interval("1603")
+#' airac_interval("2403")
 #'
 airac_interval <- function(airac) {
+  # airac is 4 digits
+  stopifnot(grepl("[0-9]{4}", airac))
+
+  # no more than 14 cycles in a year (2020 has 14 cycles)
+  cycle <- as.integer(substr(airac, 3, 4))
+  stopifnot(0 < cycle & cycle <= 14)
+
   year <- lubridate::ymd(
     paste0(substr(airac, 1, 2), "-01-01"),
     tz = "UTC")
   year <- lubridate::year(year)
-  cycle <- as.integer(substr(airac, 3, 4))
   y_epoch <- airac_year_epoch(year)
   a_beg <- y_epoch + lubridate::ddays( (cycle - 1) * 28)
-  # TODO: check for correct `airac`
-  # stopifnot(airac(a_beg) != airac)
+  stopifnot(airac(a_beg) == airac)
   a_end <- a_beg + lubridate::ddays(28)
   lubridate::interval(a_beg, a_end)
 }

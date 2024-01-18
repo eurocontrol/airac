@@ -10,13 +10,13 @@ airac(date)
 \item{date}{a date (or a representation of it understood by \code{\link[lubridate:ymd]{lubridate::ymd()}})}
 }
 \value{
-the ICAO AIRAC id
+the ICAO AIRAC id, i.e. '2301'
 }
 \description{
 Return the ICAO AIRAC id for a date
 }
 \examples{
-airac('2019-01-30')
+airac('2027-01-30')
 
 }
 \seealso{

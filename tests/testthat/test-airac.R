@@ -60,6 +60,12 @@ test_that("test AIRAC ID", {
 
 test_that("test AIRAC interval", {
 
+  expect_error(airac_interval("2314"))
+  expect_error(airac_interval("2315"))
+  expect_error(airac_interval("12315"))
+  expect_error(airac_interval("231"))
+  expect_error(airac_interval("a315"))
+
   v <- airac_interval("1601")
   expect_equal(as.Date(int_start(v)), as.Date("2016-01-07", "%Y-%m-%d", tz = "UTC"))
   expect_equal(as.Date(int_end(v)), as.Date("2016-02-04", "%Y-%m-%d", tz = "UTC"))
