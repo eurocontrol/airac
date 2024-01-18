@@ -44,3 +44,23 @@ library(airac)
 cfmu_airac("2023-02-01")
 #> [1] 500
 ```
+
+# Development
+
+In order to build the relevant `pkgdown` web pages, execute the
+following code:
+
+``` r
+
+# How to build the pakgdown from behind proxied Internet
+library(withr)
+library(pkgdown)
+
+with_options(list(pkgdown.internet = FALSE),
+             build_site())
+```
+
+Note that the pkgdown website is generated in `docs/` which is ignored
+by git. So if you want to publish a new version of the package website,
+you need to force add `docs/`. it will then be served by GitHub Pages as
+per repo configuration.
