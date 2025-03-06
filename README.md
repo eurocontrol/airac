@@ -21,7 +21,7 @@ You can install the development version of airac like so:
 
 ``` r
 library(remotes)
-install_github("euctrl-pru/pruatlas")
+install_github("eurocontrol/airac")
 ```
 
 ## Example
